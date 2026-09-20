@@ -1,7 +1,21 @@
 {
   "name": "angofind",
-  "module": "index.ts",
+  "version": "1.0.0",
+  "description": "Official JavaScript SDK for the AngoFind API",
+  "license": "ISC",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build index.ts --outdir dist --target node && tsc --declaration --emitDeclarationOnly",
+    "dev": "bun run index.ts",
+    "pack": "mkdir packages && npm pack && mv *.tgz packages/",
+    "prepublishOnly": "bun run build && npm version patch && npm run pack"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
