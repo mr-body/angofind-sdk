@@ -1,6 +1,6 @@
 {
   "name": "angofind",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Official JavaScript SDK for the AngoFind API",
   "license": "ISC",
   "module": "dist/index.js",
