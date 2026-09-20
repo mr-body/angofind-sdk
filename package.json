@@ -13,7 +13,7 @@
   "scripts": {
     "build": "bun build index.ts --outdir dist --target node && tsc --declaration --emitDeclarationOnly",
     "dev": "bun run index.ts",
-    "pack": "mkdir packages && npm pack && mv *.tgz packages/",
+    "pack": "mkdir -p packages && npm pack && mv *.tgz packages/",
     "prepublishOnly": "bun run build && npm version patch && npm run pack"
   },
   "devDependencies": {
