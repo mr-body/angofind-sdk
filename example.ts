@@ -5,13 +5,9 @@ const angofind = new AngoFind({
 });
 
 async function main() {
-    const data = await angofind.getPublication({
-        telefone: "942419531"
-    });
+    const data = await angofind.getContribuinte("00000000000KN44");
 
-    const name = data[0].nif
-
-    console.log(name)
+    console.log(data)
 }
 
 main()
